@@ -1,0 +1,41 @@
+{
+    "java.compile.nullAnalysis.mode": "automatic",
+    "rest-client.environmentVariables": {
+        "localhost": {
+            "encomiendassp_api": "http://localhost:8080/encomiendassp",
+            "encomiendassp_token": "Gernerar con api/auth/login"
+        },
+        "snap": {
+            "encomiendassp_api": "http://localhost:8080/encomiendassp",
+            "encomiendassp_token": "Gernerar con api/auth/login"
+        },
+        "desarrollo": {
+            "encomiendassp_api": "http://localhost:8080/encomiendassp",
+            "encomiendassp_token": "Gernerar con api/auth/login"
+        },
+        "produccion": {
+            "encomiendassp_api": "http://localhost:8080/encomiendassp",
+            "encomiendassp_token": "Gernerar con api/auth/login"
+        }
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#338e51",
+        "activityBar.background": "#338e51",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#e3c17b",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#338e51",
+        "statusBar.background": "#23923e",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#338e51",
+        "statusBarItem.remoteBackground": "#23923e",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#23923e",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#23923e99",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#23923e"
+}

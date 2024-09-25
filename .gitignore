@@ -1,0 +1,59 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### MiCodeYa ###
+generator/salida
+generator/salida-intermedia
+
+/src/main/resources/config/*.properties
+!/src/main/resources/config/db.localhost.example.properties
+
+/src/main/resources/*.properties
+!/src/main/resources/application.example.properties
+!/src/main/resources/application.example-mac.properties
+!/src/main/resources/application.example-windows.properties
+!/src/main/resources/ValidationMessages.properties
+.DS_Store
+
+src/main/resources/jasper-report/*/*.jasper
+src/main/resources/jasper-report/*/*/*.jasper
+src/main/resources/jasper-report/*/salida/*
+src/main/resources/jasper-report/*/*/salida/*
+
+.env
+docker-db/
+
+
+### OTROS PROPIOS DEL PROYECTO
+

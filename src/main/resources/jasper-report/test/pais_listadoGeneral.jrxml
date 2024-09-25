@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="pais_listadoGeneral" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="675294e2-d5f8-4abf-a415-d2d681a06804">
+	<property name="ireport.zoom" value="1.6105100000000045"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="net.sf.jasperreports.export.pdf.metadata.author" value="juancito"/>
+	<property name="net.sf.jasperreports.export.pdf.metadata.creator" value="juancitoo"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.1" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.band.2" value="pageFooter"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.keep.first.band.1" value="columnHeader"/>
+	<property name="net.sf.jasperreports.export.xls.exclude.origin.keep.first.band.2" value="pageHeader"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.print.keep.full.text" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.collapse.row.span" value="true"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_USUARIO_SESION" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["nn"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_TITULO_SISTEMA" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[" _kwf_ Kuaa Web Framework "]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_TITULO_REPORTE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["kuaa.com.py"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_CABECERA_EXTRA" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_CABECERA" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["nn"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_FORMATO" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["pdf"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="json">
+		<![CDATA[]]>
+	</queryString>
+	<field name="id_pais" class="java.lang.String">
+		<fieldDescription><![CDATA[idPais]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[nombre]]></fieldDescription>
+	</field>
+	<field name="activo" class="java.lang.String">
+		<fieldDescription><![CDATA[activo]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="73">
+			<textField>
+				<reportElement x="460" y="1" width="94" height="27" uuid="1859d307-8c86-4285-9b9a-1ef56fb52012"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Usuario: "+$P{P_USUARIO_SESION}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="43" width="554" height="17" uuid="07213453-9ebb-4a4f-ac90-e248ae02bdb9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_CABECERA}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-1" y="42" width="555" height="1" forecolor="#999999" uuid="4a2d6330-6bc8-41fd-9e06-5b064498f50c"/>
+			</line>
+			<textField>
+				<reportElement x="62" y="21" width="398" height="20" uuid="6b069d8f-5963-4264-bd54-b9dbda6a4141"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Arial" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_TITULO_REPORTE}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="1" y="1" width="61" height="38" uuid="1089cb57-e167-4bb8-931d-e0ec388b4cb2"/>
+				<imageExpression><![CDATA["logo1.png"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="62" y="1" width="398" height="20" uuid="07fa6125-453b-49f0-92d7-e1b70a2fd3d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_TITULO_SISTEMA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="60" width="554" height="13" uuid="73192690-8a41-409d-98f2-a077a59fb981"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_CABECERA_EXTRA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="29" width="94" height="12" uuid="2e4516c9-8e05-4750-9d2d-a20587f56576"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[(new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new java.util.Date()))]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<line>
+				<reportElement x="1" y="18" width="555" height="1" uuid="18f731d5-532c-4bd7-ac21-d48fbcbb121a"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="92" height="18" uuid="73f2ac57-7d10-4f0e-b522-67c02bc473bb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[id Pais]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="0" width="92" height="18" uuid="85228f55-87b7-4150-8def-52c57184e5ec"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="92" height="18" uuid="b0923c9b-29bc-47c6-adc7-1170fca1e39b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Activo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14">
+			<textField>
+				<reportElement x="0" y="0" width="92" height="13" uuid="7d8d294e-1cf1-4a08-b282-d74737b27382"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_pais}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="92" y="0" width="92" height="13" uuid="07de7cbc-f153-420d-92e1-7d20e75f55ce"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="92" height="13" uuid="acd761f7-ea53-4ddc-a055-a43ee4ca78c0"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{activo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="f2cf6cb8-50ed-4466-afb4-78a7a7d719b3"/>
+			</line>
+			<textField>
+				<reportElement x="1" y="3" width="80" height="20" uuid="5dadecd9-0a30-4d05-9d63-184a3b215779"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="81" y="3" width="40" height="20" uuid="8eade5cc-8c37-43c2-8d77-1c3b0be74e03"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="24"/>
+	</summary>
+</jasperReport>

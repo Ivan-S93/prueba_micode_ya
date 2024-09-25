@@ -1,0 +1,46 @@
+## Entorno de .vscode/settings.json
+## Seleccionar entorno con  CTRL+ALT+E o CMD+OPTION+E
+@SOY_VARIABLE=Soy el contenido
+
+## Probar server
+curl --location --request GET '{{encomiendassp_api}}/server/status'
+
+
+### LOGIN
+curl --location --request POST '{{encomiendassp_api}}/api/auth/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "user": "admin",
+    "password": "admin"
+}'
+
+
+### Verificar idRecurso
+curl --location --request POST '{{encomiendassp_api}}/api/auth/verificarPermiso' \
+--header 'Authorization: Bearer {{encomiendassp_token}}' \
+--header 'xrn-so: web' --header 'xrn-version: 1.0.0' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "idRecurso": 9
+}'
+
+
+### Encriptar password para que se pueda setearlo por BD
+### Generalemte cuando se cambia el secret del JWT
+curl --location --request POST '{{encomiendassp_api}}/api/public/encriptarPassword' \
+--header 'Authorization: Bearer {{encomiendassp_token}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "user": "visitante",
+	"password":"visitante"
+}'
+
+### verificar existencia de usuario
+curl --location --request POST '{{encomiendassp_api}}/api/public/registro/verificarExistenciaUsuario' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "user": "admin"
+}'
+
+
+

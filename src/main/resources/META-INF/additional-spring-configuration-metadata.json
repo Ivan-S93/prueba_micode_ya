@@ -1,0 +1,67 @@
+{"properties": [
+  {
+    "name": "db.config.props",
+    "type": "java.lang.String",
+    "description": "Archivo que contiene configuracion para conexion a BD"
+  },
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "Key para la Generacion de JsonWebToken"
+  },
+  {
+    "name": "jwt.duracion",
+    "type": "java.lang.String",
+    "description": "Tiempo duracion de JWT, en HORAS"
+  },
+  {
+    "name": "file.upload.directory",
+    "type": "java.lang.String",
+    "description": "Directorio donde se almacenaran archivos subidos'"
+  },
+  {
+    "name": "jasper.report.directorio.jrxml",
+    "type": "java.lang.String",
+    "description": "Directorio base donde se encuetran los archivos JRXML que deben ser compilados"
+  },
+  {
+    "name": "jasper.report.directorio.compilado",
+    "type": "java.lang.String",
+    "description": "Destino de los archivos .jrxml compilados que son .jasper"
+  },
+  {
+    "name": "jasper.report.directorio.output",
+    "type": "java.lang.String",
+    "description": "Lugar temporal donde generar los reportes, .pdf, ,excel, etc.."
+  },
+  {
+    "name": "server.cors.permitido",
+    "type": "java.lang.String",
+    "description": "Permitido parar CORS, separado por ',', \"*\" para permitir todo. Ej.: https://kgc.kerpeko.com,https://kerpeko.com,https://jueleto.com"
+  },
+  {
+    "name": "mail.resend.apiKey",
+    "type": "java.lang.String",
+    "description": "ApiKey para enviar mail servicio resend.com"
+  },
+  {
+    "name": "mail.resend.from",
+    "type": "java.lang.String",
+    "description": "Mail que enviará via servicio resend.com"
+  },
+  {
+    "name": "nombre.largo",
+    "type": "java.lang.String",
+    "description": "Nombre largo del Sistema"
+  },
+  {
+    "name": "nombre.mobile",
+    "type": "java.lang.String",
+    "description": "Nombre de la App Mobile"
+  },
+  {
+    "name": "proyecto.identificador",
+    "type": "java.lang.String",
+    "description": "Identifador o sigla unica del proyecto"
+  }
+]}
