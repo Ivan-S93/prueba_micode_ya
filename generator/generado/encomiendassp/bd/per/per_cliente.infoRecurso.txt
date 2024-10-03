@@ -1,0 +1,5 @@
+idRecurso: 95, grupo: per, tipo: VIS => Cliente - Menu
+idRecurso: 96, grupo: per, tipo: FUN => Cliente - Listar
+idRecurso: 97, grupo: per, tipo: FUN => Cliente - Agregar
+idRecurso: 98, grupo: per, tipo: FUN => Cliente - Modificar
+idRecurso: 99, grupo: per, tipo: FUN => Cliente - Eliminar

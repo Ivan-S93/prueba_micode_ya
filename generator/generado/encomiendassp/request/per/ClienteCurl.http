@@ -1,0 +1,67 @@
+## Entorno de .vscode/settings.json, Ej: rest-client-example.json. 
+## Seleccionar entorno con CMD+ALT+E
+@SOY_VARIABLE=Soy el contenido
+
+### Cliente listar
+curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/listar' \
+# curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/listar/c/cuentaCore' \
+--header 'Authorization: Bearer {{encomiendassp_token}}' \
+--header 'xrn-so: web' --header 'xrn-version: 1.0.0' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "all": false,
+    "page": 1,
+    "limit": 10,
+    "orderBy": "nombre asc",
+    "filterList":[],
+    "atributos":"",
+    "detalles":[],
+    "extra":""
+}'
+###"filterList":  [{"data":"idCliente", "op":"eq", "value":100, "group":"and"}]
+
+
+
+### Cliente agregar
+curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/agregar' \
+--header 'Authorization: Bearer {{encomiendassp_token}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "nombre": "Hugo",
+	"apellido": "Morel",
+	"numeroDocumento": 1237664,
+	"numeroTelefono": "0971166765",
+	"ciudad": "Misioes",
+	"activo": true,
+    "fechaNacimientoMask": null,
+	"direccion": null
+}'
+
+
+### Cliente modificar
+curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/modificar' \
+--header 'Authorization: Bearer {{encomiendassp_token}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "idCliente": 101,
+    "nombre": "Emilio",
+	"apellido": "sosa",
+	"numeroDocumento": 88544,
+	"numeroTelefono": "156789",
+	"ciudad": "Capiata",
+	"activo": true,
+    "fechaNacimientoMask": "12/05/1995" ,
+	"direccion": null
+}'
+
+
+### Cliente eliminar
+curl --location --request POST '{{encomiendassp_api}}/api/zk/usuario/eliminar' \
+--header 'Authorization: Bearer {{encomiendassp_token}}' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "idCliente": 103
+}'
+
+// KGC-NOREPLACE-OTROS-INI
+// KGC-NOREPLACE-OTROS-FIN
