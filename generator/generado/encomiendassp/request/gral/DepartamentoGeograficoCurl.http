@@ -2,9 +2,9 @@
 ## Seleccionar entorno con CMD+ALT+E
 @SOY_VARIABLE=Soy el contenido
 
-### Cliente listar
-curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/listar' \
-# curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/listar/c/cuentaCore' \
+### DepartamentoGeografico listar
+curl --location --request POST '{{encomiendassp_api}}/api/gral/departamentoGeografico/listar' \
+# curl --location --request POST '{{encomiendassp_api}}/api/gral/departamentoGeografico/listar/c/cuentaCore' \
 --header 'Authorization: Bearer {{encomiendassp_token}}' \
 --header 'xrn-so: web' --header 'xrn-version: 1.0.0' \
 --header 'Content-Type: application/json' \
@@ -18,49 +18,42 @@ curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/listar' \
     "detalles":[],
     "extra":""
 }'
-###"filterList":  [{"data":"idCliente", "op":"eq", "value":100, "group":"and"}]
+###"filterList":  [{"data":"idDepartamentoGeografico", "op":"eq", "value":100, "group":"and"}]
 
 
 
-### Cliente agregar
-curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/agregar' \
+### DepartamentoGeografico agregar
+curl --location --request POST '{{encomiendassp_api}}/api/gral/departamentoGeografico/agregar' \
 --header 'Authorization: Bearer {{encomiendassp_token}}' \
+--header 'xrn-so: web' --header 'xrn-version: 1.0.0' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "nombre": "Fabiola",
-	"apellido": "Gomez",
-	"numeroDocumento": 23435,
-	"numeroTelefono": "0971167765",
-	"ciudad": "Encarnacion",
-	"activo": true,
-    "fechaNacimientoMask": "19/05/1993",
-	"direccion": "ruta py 02"
+    "codigo": "002",
+	"nombre": "San Pedro",
+	"activo": true
+    
 }'
 
 
-### Cliente modificar
-curl --location --request POST '{{encomiendassp_api}}/api/per/cliente/modificar' \
+### DepartamentoGeografico modificar
+curl --location --request POST '{{encomiendassp_api}}/api/gral/departamentoGeografico/modificar' \
 --header 'Authorization: Bearer {{encomiendassp_token}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "idCliente": 101,
-    "nombre": "Emilio",
-	"apellido": "sosa",
-	"numeroDocumento": 88544,
-	"numeroTelefono": "156789",
-	"ciudad": "Capiata",
-	"activo": true,
-    "fechaNacimientoMask": "12/05/1995" ,
-	"direccion": null
+    "idDepartamentoGeografico": 0,
+    "codigo": "",
+	"nombre": "",
+	"activo": true
+    
 }'
 
 
-### Cliente eliminar
+### DepartamentoGeografico eliminar
 curl --location --request POST '{{encomiendassp_api}}/api/zk/usuario/eliminar' \
 --header 'Authorization: Bearer {{encomiendassp_token}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "idCliente": 103
+    "idDepartamentoGeografico": 0
 }'
 
 // KGC-NOREPLACE-OTROS-INI

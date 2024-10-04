@@ -1,0 +1,5 @@
+idRecurso: 95, grupo: gral, tipo: VIS => Ciudad Geográfica - Menu
+idRecurso: 96, grupo: gral, tipo: FUN => Ciudad Geográfica - Listar
+idRecurso: 97, grupo: gral, tipo: FUN => Ciudad Geográfica - Agregar
+idRecurso: 98, grupo: gral, tipo: FUN => Ciudad Geográfica - Modificar
+idRecurso: 99, grupo: gral, tipo: FUN => Ciudad Geográfica - Eliminar
